@@ -35,7 +35,7 @@ const PaymentForm = ({
       console.log(error);
     } else {
       const orderData = {
-        line_items: checkoutToken.live.line_items,
+        line_items: checkoutToken.line_items,
         customer: {
           firstname: shippingData.firstName,
           lastname: shippingData.lastName,
@@ -90,7 +90,7 @@ const PaymentForm = ({
                   disabled={!stripe}
                   className={classes.next}
                 >
-                  Pay {checkoutToken.live.subtotal.formatted_with_symbol}
+                  Pay {checkoutToken.subtotal.formatted_with_symbol}
                 </Button>
               </div>
             </form>
